@@ -9,14 +9,18 @@
   }
   &__content{
     position: absolute;
-    top: 100px;
+    top: 250px;
     font-size: 100px;
     text-align: center;
     width: 100%;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     &__img{
+      line-height: 20px;
       img{
         width: 20%;
+      }
+      h2{
+        line-height: 110px;
       }
     }
     &__login{
