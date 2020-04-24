@@ -1,10 +1,18 @@
-.index-main
-  = image_tag 'frank-mckenna-OD9EOzfSOh0-unsplash.jpg', alt: '壁紙'
-  .index-main__content
-    .index-main__content__img
-      = image_tag 'pc.png'
-      %h2
-        Put:Memo
-    .index-main__content__login
-      = link_to'ログイン', '#',class:"index-login"
-      = link_to '新規登録', '#',class:"index-loGin"
+- if user_signed_in?
+  .index-all
+    .index-Main
+      .index-side
+        side
+      .index-Mains
+        main
+- else
+  .index-main
+    = image_tag 'frank-mckenna-OD9EOzfSOh0-unsplash.jpg', alt: '壁紙'
+    .index-main__content
+      .index-main__content__img
+        = image_tag 'pc.png'
+        %h2
+          Put:Memo
+      .index-main__content__login
+        = link_to'ログイン', "/" ,class:"index-login"
+        = link_to '新規登録', signup_path,class:"index-loGin"

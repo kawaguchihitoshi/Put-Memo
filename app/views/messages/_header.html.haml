@@ -2,14 +2,23 @@
   .template-header__box
     .template-header__box__left
       .template-header__box__left__logo
-        =link_to new_message_path(2),target: "_self" do
+        =link_to root_path,target: "_self" do
           = image_tag 'pc.png'
-        Put:Memo
+          Put:Memo
       .template-header__box__left__search
         = form_tag "#" do
           = text_field :text, class:"text", placeholder: "キーワードから探す"
     .template-header__box__right
-      .template-header__box__right__new
-        新規投稿
-      .template-header__box__right__mypage
-        マイページ
+      - if user_signed_in?
+        .template-header__box__right__new
+          新規投稿
+      - else
+        .template-header__box__right__new
+      - if user_signed_in?
+        .template-header__box__right__new
+          = link_to 'マイページ', signup_path
+        .template-header__box__right__new
+          = link_to 'ログアウト', logout_path
+      - else 
+        .template-header__box__right__mypage
+      
