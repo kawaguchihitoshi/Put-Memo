@@ -19,10 +19,11 @@
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         line-height: 60px;
         font-size: 30px;
-        text-decoration: none;
-        color: #404040;
+        box-sizing:180px;
         a{
+          text-decoration: none;
           height: 60px;
+          color: #404040;
           img{
             height: 100%;
             vertical-align: bottom;
@@ -43,9 +44,12 @@
       display: flex;
       justify-content: space-between;
       &__new{
-        color: #4DBEFF;
         line-height: 60px;
         margin-right: 10px;
+        a{
+          text-decoration: none;
+          color: #4DBEFF;
+        }
       }
       &__mypage{
         color:#4DBEFF;

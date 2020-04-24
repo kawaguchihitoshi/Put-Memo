@@ -6,6 +6,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
     @user = User.find_by(id: params[:id])
   end
 
+
   # protected
 
   # ここのコメントアウトを外してリダイレクト先を指定

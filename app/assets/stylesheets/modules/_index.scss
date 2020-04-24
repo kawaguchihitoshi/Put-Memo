@@ -51,3 +51,23 @@
     }
   }
 }
+
+.index-all{
+  background-color: whitesmoke;
+  padding: 30px 250px;
+  .index-Main{
+    display: flex;
+    .index-side{
+      margin: 0px 10px;
+      min-width: 200px;
+      max-width: 300px;
+      background-color: white;
+    }
+    .index-Mains{
+      margin: 0px 10px;
+      background-color: white;
+      width: 100%;
+
+    }
+  }
+}
