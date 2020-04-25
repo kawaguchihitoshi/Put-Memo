@@ -1,13 +1,16 @@
 .sign-header{
   background-color: whitesmoke;
+  display: flex;
+  justify-content: center;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  line-height: 60px;
-  font-size: 30px;
+  line-height: 70px;
+  font-size: 40px;
   box-sizing:180px;
   a{
     text-decoration: none;
-    height: 60px;
+    height: 70px;
     color: #404040;
+    margin: 50px 0px;
     img{
       height: 100%;
       vertical-align: bottom;
@@ -16,4 +19,30 @@
 }
 .sign-main{
   background-color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  form{
+    background-color: white;
+    padding: 50px;
+    font-family: 'arial unicode ms';
+    min-width: 500px;
+    .field{
+      padding: 20px;
+      label{
+      }
+      input{
+        width: 100%;
+        padding: 8px;
+        margin-top: 10px;
+      }
+    }
+    .actions{
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+      input{
+        width: 100%;
+      }
+    }
+  }
 }
