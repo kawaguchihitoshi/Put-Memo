@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 .sign-header{
   background-color: whitesmoke;
   display: flex;
@@ -20,12 +23,28 @@
 .sign-main{
   background-color: whitesmoke;
   display: flex;
-  justify-content: center;
   form{
     background-color: white;
     padding: 50px;
     font-family: 'arial unicode ms';
     min-width: 500px;
+    margin: 0 auto;
+    .sign-no_account{
+      padding-bottom: 40px;
+      text-align: center;
+      p{
+        padding-bottom: 10px;
+      }
+      a{
+        text-decoration: none;
+        width: 100%;
+        padding: 20px;
+        background-color: #ffbb33;
+        color: white;
+        font-size: 20px;
+        display: block;
+      }
+    }
     .field{
       padding: 20px;
       label{
@@ -40,9 +59,17 @@
       display: flex;
       justify-content: center;
       padding: 20px;
-      input{
+      button{
         width: 100%;
+        padding: 20px;
+        background-color: #ffbb33;
+        color: white;
+        font-size: 20px;
       }
     }
   }
+}
+.sign-footer{
+  background-color: whitesmoke;
+  height: 200px;
 }
