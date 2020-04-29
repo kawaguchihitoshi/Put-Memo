@@ -11,7 +11,7 @@
     .template-header__box__right
       - if user_signed_in?
         .template-header__box__right__new
-          新規投稿
+          = link_to "カードを作る" ,new_message_path
       - else
         .template-header__box__right__new
       - if user_signed_in?
