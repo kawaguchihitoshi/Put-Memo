@@ -1,0 +1,12 @@
+.wraper
+  = render "header"
+  .new-main
+    .new-mains
+      = form_for @message do |f|
+        .field
+          = f.text_field :title,autofocus: true, placeholder: 'タイトル'
+
+
+
+      
+  = render "footer"
