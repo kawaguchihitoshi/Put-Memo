@@ -5,8 +5,24 @@
   .new-mains{
     background-color: white;
     margin: 0 auto;
-    min-width: 800px;
-    padding: 50px;
-  form
+    min-width: 1300px;
+    form{
+      margin: 50px;
+      .field{
+        width: 100%;
+        height: 100%;
+        margin-bottom: 10px;
+        input{
+          width: 100%;
+          height: 100%;
+          font-size: 25px;
+          padding: 5px;
+        }
+        textarea{
+          width: 100%;
+          resize: none;
+        }
+      }
+    }
   }
 }
