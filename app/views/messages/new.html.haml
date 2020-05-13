@@ -27,5 +27,5 @@
                 .js-file_group{"data-index" => @messaage.count}
                   = file_field_tag :image_url, name: "message[#{@message.count}][image]", class: 'js-file'
                   .js-remove 削除
-
+        = f.submit "登録する"
       
