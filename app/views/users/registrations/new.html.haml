@@ -5,22 +5,22 @@
 .sign-main
   = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
     = render "devise/shared/error_messages", resource: resource
-    .field
+    .fields
       = f.label :ニックネーム
       %br/
       = f.text_field :name, autofocus: true
-    .field
+    .fields
       = f.label :メールアドレス
       %br/
       = f.email_field :email, autofocus: true, autocomplete: "email"
-    .field
+    .fields
       = f.label :パスワード
       - if @minimum_password_length
         %em
           (#{@minimum_password_length} 文字以上の半角英数字)
       %br/
       = f.password_field :password, autocomplete: "new-password"
-    .field
+    .fields
       = f.label :パスワード_（確認）
       %br/
       = f.password_field :password_confirmation, autocomplete: "new-password"

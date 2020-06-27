@@ -7,18 +7,18 @@
     .sign-no_account
       %p アカウントをお持ちでない方はこちら
       = link_to '新規会員登録', signup_path,class:"index-loGin"
-    .field
+    .fields
       = f.label :メールアドレス
       %br/
       = f.email_field :email, autofocus: true, autocomplete: "email"
-    .field
+    .fields
       = f.label :パスワード
       %br/
       = f.password_field :password, autocomplete: "current-password"
-    - if devise_mapping.rememberable?
-      .field
-        = f.check_box :remember_me
-        = f.label :remember_me
+    -# - if devise_mapping.rememberable?
+    -#   .fields
+    -#     = f.label :remember_me
+    -#     = f.check_box :remember_me
     .actions
       = f.button "ログイン"
 .sign-footer
