@@ -7,25 +7,25 @@
           = f.text_field :title,autofocus: true, placeholder: 'タイトル'
         .field
           = f.text_area :text,autofocus: true,rows: "30" ,placeholder: '説明'
-        .new-main_image#image-box-1
-          #image-box
-            #previews
-              - if @message.persisted?
-                - @message.each_with_index do |image, i|
-                  = image_tag image.image.url, data: { index: i }, width: "100", height: '100'
-            #forms
-              = f.fields_for :messages do |image|
-                .js-file_group{"data-index" => image.index}
-                  = image.label :image do
-                    %i.fa.fa-image
-                    = image.file_field :image, class: 'js-file'
-                  %br/
-                  %span.js-remove 削除
+          .new-main_image#image-box-1
+            #image-box
+              #previews
                 - if @message.persisted?
-                  = image.check_box :_destroy, data:{ index: image.index }, class: 'hidden-destroy'
-              - if @message.persisted?
-                .js-file_group{"data-index" => @messaage.count}
-                  = file_field_tag :image_url, name: "message[#{@message.count}][image]", class: 'js-file'
-                  .js-remove 削除
+                  - @message.each_with_index do |image, i|
+                    = image_tag image.image.url, data: { index: i }, width: "100", height: '100'
+              #forms
+                = f.fields_for :messages do |image|
+                  .js-file_group{"data-index" => image.index}
+                    = image.label :image do
+                      %i.fa.fa-image
+                      = image.file_field :image, class: 'js-file'
+                    %br/
+                    %span.js-remove 削除
+                  - if @message.persisted?
+                    = image.check_box :_destroy, data:{ index: image.index }, class: 'hidden-destroy'
+                - if @message.persisted?
+                  .js-file_group{"data-index" => @messaage.count}
+                    = file_field_tag :image_url, name: "message[#{@message.count}][image]", class: 'js-file'
+                    .js-remove 削除
         = f.submit "登録する"
       
